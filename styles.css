@@ -1,0 +1,410 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background: #f4f4f4;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+/* Navigation Bar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 1rem 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+
+/* Logo */
+nav .logo img {
+    height: 40px; /* Adjust the height as needed */
+    width: auto; /* Maintain aspect ratio */
+    transition: opacity 0.3s ease;
+}
+
+nav .logo img:hover {
+    opacity: 0.8; /* Slight fade on hover */
+}
+  nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav .nav-links li {
+    display: inline-block;
+  }
+  
+  nav .nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+  
+  nav .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #ff6f61;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  nav .nav-links a:hover {
+    color: #ff6f61;
+  }
+  
+  nav .nav-links a:hover::after {
+    width: 100%;
+  }
+  /* Home Section */
+  .home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, hsla(157, 97%, 49%, 0.341), hsl(165, 96%, 47%));
+    color: #070707;
+}
+
+.home h1 {
+    font-size: 3rem;
+    animation: fadeIn 2s ease-in-out;
+}
+  
+  .home p {
+    font-size: 1.5rem;
+    animation: fadeIn 3s ease-in-out;
+  }
+  
+  .home .btn {
+    margin-top: 1rem;
+    animation: fadeIn 4s ease-in-out;
+  }
+  
+  /* About Section */
+  .about {
+    padding: 4rem 0;
+    background: #fff;
+  }
+  
+  .about h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+/* Portfolio Section */
+.portfolio {
+    padding: 4rem 0;
+    background: #f4f4f4;
+  }
+  
+  .portfolio h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .projects-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .projects {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .project-card {
+    min-width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: none; /* Hide all cards by default */
+  }
+  
+  .project-card.active {
+    display: block; /* Show the active card */
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .project-info {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  /* Arrows */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 10;
+    transition: background 0.3s ease;
+}
+  
+.arrow:hover {
+    background: #ff6f61;
+  }
+  
+  .left-arrow {
+    left: 10px;
+  }
+  
+  .right-arrow {
+    right: 10px;
+  }
+  /* Skills Section */
+  .skills {
+    padding: 4rem 0;
+    background: #fff;
+  }
+  
+  .skills h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .skills-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .skill {
+    text-align: center;
+    margin: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .skill:hover {
+    transform: scale(1.1);
+  }
+  
+  .skill i {
+    font-size: 3rem;
+    color: #ff6f61;
+  }
+  
+  /* Contact Section */
+
+/* Contact Section */
+.contact {
+    padding: 4rem 0;
+    background: #f4f4f4;
+  }
+  
+  .contact h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .contact-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .contact-info, .contact-form {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  .contact-info {
+    background: hsl(165, 96%, 47%);
+    color: #fff;
+  }
+  
+  .contact-info h3, .contact-form h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .contact-info ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-info ul li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .contact-info ul li i {
+    margin-right: 0.5rem;
+  }
+  
+  .contact-info ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-info ul li a:hover {
+    color: #ffdd57;
+  }
+  
+  .contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .contact-form textarea {
+    resize: vertical;
+  }
+  
+  .contact-form .btn {
+    background: hsl(165, 96%, 47%);
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .contact-form .btn:hover {
+    background: hsl(162, 95%, 47%);
+  }
+  .contact {
+    padding: 4rem 0;
+    background: #f4f4f4;
+  }
+  
+  .contact h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact input, .contact textarea {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact button {
+    margin-top: 1rem;
+  }
+  
+  /* Footer */
+  footer {
+    background: rgba(255, 255, 255, 0.9);
+    color: #0f0f0f;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  .social-links a {
+    color: #050505;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: #ff6f61;
+  }
+  
+  /* Scroll to Top Button */
+  .scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ff6f61;
+    color: #0a0a0a;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.3s ease;
+}
+  
+.scroll-top:hover {
+    opacity: 0.8;
+}
+  
+  /* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
